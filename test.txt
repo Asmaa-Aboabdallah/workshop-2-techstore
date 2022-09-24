@@ -1,0 +1,70 @@
+
+cats (id, name, created_at)
+products (id, name,desc,price,pieces_no, img , created_at, cat_id)
+orders (id, name, email, phone , address, status , created_at)
+(status => approaved - canceled)
+order_details (id , order_id , product_id , quantity)
+--------------------------------------------------------------
+admins (id, name , email , password , is_super, created_at)
+
+DECIMAL(total nums , العدد اللي بعد العلامة العشرية)
+
+----------------------------------------------------------
+type hinting --> define data type of data sent to function and data type of return
+
+Request
+Session
+Db ==> Models 
+Validation
+1- Required
+2-Str
+3-Numeric
+
+ValidationRule ==> check
+validator ==> age 25 (required|numeric)
+
+html files -> php files
+
+include common components
+
+assets => images (static) , css , js 
+uploads => images (dynamic)
+
+app.php ==> define settings of project 
+
+autoloading ==> composer.json
+autoloader ==> بيختصر سطور ال require في سطر واحد 
+مجرد ما تستخدم اي كلاس ال auto loader  بيعمل require للكلاس وراء الكواليس
+ولو زودت كلاسات تانيه ومشيت علي ال namesapce standard هيقرا الكلاسات دي مباشرة
+create namespaces (psr)  (vendor TeachStore)/(folderName)
+
+
+composer.json:
+"psr-4":{ // standard
+            "TeachStore\\Classes\\":"classes/" // Main namesapce: main folder
+        }
+
+
+In terminal to run composer.json:
+composer dump-autoload
+
+
+Categories
+
+
+
+'cart' => [
+    '3' => [
+        'qty' => 1,
+         'name',
+         'price',
+         'img'
+    ],
+
+    '5' => [
+        'qty' => 2,
+        'name',
+         'price',
+         'img'
+    ],
+]
